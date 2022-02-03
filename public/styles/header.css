@@ -1,10 +1,11 @@
-.header {
+header {
   height: 400px;
   width: 100%;
   background: url(../images/wood-pattern.png);
   background-color: blueviolet;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black;
 }
