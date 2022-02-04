@@ -100,3 +100,15 @@ main {
   margin-bottom: 0px;
   margin-top: 5px;
  }
+
+.thumbs:hover {
+   color: green;
+ }
+ 
+ .retweet:hover {
+   color: yellow;
+ }
+
+ .comment:hover {
+   color:rgb(28, 81, 226);
+ }
