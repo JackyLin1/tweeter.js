@@ -39,3 +39,64 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+
+ .box {
+  border-style: dotted;
+  margin: 15px;
+  }
+
+  .box top {
+  display: flex;
+  flex-direction: row;
+  }
+
+  .box .profile {
+  flex-wrap: wrap;
+  width: 150px;
+  height: 150 px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border : solid #fff;
+  padding: 5px;
+ }
+ 
+ 
+ .atOtherUsers {
+   width: 10%;
+   margin: 10px;
+  }
+  
+  .tweet {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .name {
+     margin-top: 0px;
+     margin-bottom: 0px;
+     margin-left: 57px;
+     width: 10%;
+
+   }
+   
+   .timestamp {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+ }
+
+ .symbols {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+ }
