@@ -30,7 +30,12 @@ $(document).ready(function () {
     }
   ]
 
-
+const renderTweet = function (tweets) {
+  for (let tweet of tweets) {
+    let $tweet = createTweetElement(tweet);
+    $(`.messages`).append($tweet);
+  }
+}
 
 const createTweetElement = function (data) {
 
@@ -56,5 +61,5 @@ const createTweetElement = function (data) {
   return $tweet;
 }
 
-createTweetElement(data);
+renderTweet(data);
 });
