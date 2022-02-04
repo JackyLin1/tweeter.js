@@ -5,6 +5,7 @@
  */
 $(document).ready(function () {
 
+
   const data = [
     {
       "user": {
@@ -49,7 +50,7 @@ const createTweetElement = function (data) {
     <p class='name'>${data.user.name}</name></p>
     <p class='userID'>${data.user.handle}</p>
     <footer>
-    <p class= 'timestamp'>posted 1s ago</p>
+    <p class= 'timestamp'>posted ${timeago.format(data.created_at)}</p>
     <p class='symbols'> 
       <span class ='thumbs'><i class="far fa-thumbs-up"></i></span>
       <span class ='retweet'><i class="fas fa-recycle"> </i> </span>
