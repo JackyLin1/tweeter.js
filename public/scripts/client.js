@@ -63,4 +63,18 @@ const createTweetElement = function (data) {
 }
 
 renderTweet(data);
+//.submit function takes in handler function with arg of eventObj
+//added preventDefault to stop sending post request and reloading the page.
+//use .serialize to turn form data into query string
+$('form').submit(eventObj => {
+  eventObj.preventDefault();
+  const text = $("textarea").serialize();
+  $.ajax ({
+    url: `/tweets`,
+    method: `POST`,
+    data: text,
+  })
+  .then(console.log(text))
+})
+
 });
