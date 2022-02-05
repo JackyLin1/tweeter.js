@@ -31,13 +31,16 @@ $(document).ready(function () {
   //   }
   // ]
 
+//messages goes through createTweetElement
+//new tweets shows on top of old tweets
 const renderTweet = function (tweets) {
   for (let tweet of tweets) {
     let $tweet = createTweetElement(tweet);
-    $(`.messages`).append($tweet);
+    $(`.messages`).prepend($tweet);
   }
 }
 
+//Tweet get form into a tweet card
 const createTweetElement = function (data) {
 
   let $tweet = $(
@@ -66,10 +69,13 @@ const createTweetElement = function (data) {
 //.submit function takes in handler function with arg of eventObj
 //added preventDefault to stop sending post request and reloading the page.
 //use .serialize to turn form data into query string
+//check for errors before sumbitting text
+//runs loadTweets if successful to update tweets w/o refreshing
+//if loadTweets works, clears textarea
 $('form').submit(eventObj => {
   eventObj.preventDefault();
   const text = $("textarea").serialize();
-  if(!$('textarea').val()) {
+  if($('textarea').val('')) {
     alert ('Nothing to share?');
   } else if (text.length > 140) {
     alert(`Too long, try something shorter`);
@@ -80,7 +86,9 @@ $('form').submit(eventObj => {
       method: `POST`,
       data: text,
     })
-    .then(console.log(text))
+    // .then(console.log(text))
+    .then(loadTweets())
+    .then($('textarea').val(''));
   }
 })
 
