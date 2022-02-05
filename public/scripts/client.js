@@ -69,12 +69,19 @@ const createTweetElement = function (data) {
 $('form').submit(eventObj => {
   eventObj.preventDefault();
   const text = $("textarea").serialize();
-  $.ajax ({
-    url: `/tweets`,
-    method: `POST`,
-    data: text,
-  })
-  .then(console.log(text))
+  if(!$('textarea').val()) {
+    alert ('Nothing to share?');
+  } else if (text.length > 140) {
+    alert(`Too long, try something shorter`);
+  } else {
+
+    $.ajax ({
+      url: `/tweets`,
+      method: `POST`,
+      data: text,
+    })
+    .then(console.log(text))
+  }
 })
 
 //Get JSON in /tweets
