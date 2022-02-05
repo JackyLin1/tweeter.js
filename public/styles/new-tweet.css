@@ -42,3 +42,13 @@ button {
   font-size: 12px;
   font-weight: 900;
 }
+
+#errShort {
+  color: red;
+  display: none;
+}
+
+#errLong {
+  color: red;
+  display: none;
+}

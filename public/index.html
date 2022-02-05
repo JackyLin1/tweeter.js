@@ -48,6 +48,8 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <h2 id="errShort">Nothing to say?</h2>
+        <h2 id="errLong">Too Long, try shorter</h2>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" placeholder="Share your thought..."></textarea>

@@ -72,13 +72,16 @@ const createTweetElement = function (data) {
 //check for errors before sumbitting text
 //runs loadTweets if successful to update tweets w/o refreshing
 //if loadTweets works, clears textarea
+//possible bug tweet doesnt get updated when text is too long, have to reclick submit.
 $('form').submit(eventObj => {
   eventObj.preventDefault();
   const text = $("textarea").serialize();
-  if($('textarea').val('')) {
-    alert ('Nothing to share?');
+  if(!$('textarea').val()) {
+    // alert ('Nothing to share?');
+    $('#errShort').toggle(200)
   } else if (text.length > 140) {
-    alert(`Too long, try something shorter`);
+    // alert(`Too long, try something shorter`);
+    $('#errLong').toggle(200)
   } else {
 
     $.ajax ({
@@ -88,6 +91,8 @@ $('form').submit(eventObj => {
     })
     // .then(console.log(text))
     .then(loadTweets())
+    .then($('#errShort').hide())
+    .then($('#errLong').hide())
     .then($('textarea').val(''));
   }
 })
