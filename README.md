@@ -4,8 +4,16 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
-##Final Product
-!["screenshot description"]()
+## Final Product
+
+The Main Page, where you can see all the recent tweets.
+!["screenshot description"](https://github.com/JackyLin1/tweeter.js/blob/master/public/images/Main%20Page.PNG)
+
+The Compose Page, start composing your tweet by toggling the compose section with the compose button.
+!["screenshot description"](https://github.com/JackyLin1/tweeter.js/blob/master/public/images/Compose%20Page.PNG)
+
+On the go? The tweeter page will scale to fit your mobile device resolution.
+!["screenshot description"](https://github.com/JackyLin1/tweeter.js/blob/master/public/images/Mobile%20Version.PNG)
 
 ## Getting Started
 
