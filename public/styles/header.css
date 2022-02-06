@@ -1,7 +1,7 @@
 header {
   height: 400px;
   width: 100%;
-  background: url(../images/wood-pattern.png);
+  background: url(../images/header2.jpg);
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,24 @@ header {
   margin-top: 120px;
 }
 
+h2 {
+margin: 0;
+text-align: center;
+}
+
+#name {
+  text-align: center;
+}
+
 #error {
   display: none;
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  
 }

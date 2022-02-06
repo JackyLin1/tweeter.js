@@ -1,5 +1,5 @@
 nav {
-  color: #ffffff; 
+  color: #1d89ff; 
   height: 120px;
   width: 100%;
   background-color: black;
@@ -22,3 +22,12 @@ nav div {
   white-space: pre-line;
 }
 
+
+
+@media only screen and (min-width: 1024px) {
+  
+}
+
+@media only screen and (min-width: 768px) {
+ 
+}
