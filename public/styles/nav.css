@@ -22,12 +22,29 @@ nav div {
   white-space: pre-line;
 }
 
-
-
-@media only screen and (min-width: 1024px) {
-  
+#app {
+  display: none;
 }
 
-@media only screen and (min-width: 768px) {
- 
+
+
+@media only screen and (max-width: 767px) {
+  nav {
+    color: white; 
+    height: 120px;
+    width: 100%;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+  }
+  #app {
+    display: flex;
+    flex-direction: center;
+  }
+  #title {
+    display: none;
+  }
 }
