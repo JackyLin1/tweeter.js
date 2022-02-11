@@ -8,6 +8,7 @@ $(document).ready(function() {
   //messages goes through createTweetElement
   //new tweets shows on top of old tweets
   const renderTweet = function(tweets) {
+    $('.messages').empty();
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $(`.messages`).prepend($tweet);
@@ -57,6 +58,7 @@ $(document).ready(function() {
   //possible bug tweet doesnt get updated when text is too long, have to reclick submit.
   $('form').submit(eventObj => {
     eventObj.preventDefault();
+    counter = 140;
     const text = $("textarea").serialize();
     if (!$('textarea').val()) {
     // alert ('Nothing to share?');
@@ -75,7 +77,8 @@ $(document).ready(function() {
         .then(loadTweets())
         .then($('#errShort').hide())
         .then($('#errLong').hide())
-        .then($('textarea').val(''));
+        .then($('textarea').val(''))
+        .then($('output').text('140'));
     }
   });
 
@@ -87,6 +90,7 @@ $(document).ready(function() {
   //Get JSON in /tweets
   //if successful, renderTweet();
   function loadTweets() {
+
     $.ajax({
       url:`/tweets`,
       method: `GET`,
