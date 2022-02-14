@@ -8,11 +8,11 @@ $(document).ready(function() {
     
     if (counter >= 50) {
       $("output").css('color', '');
-    } else if (counter < 50) {
+    } else if (counter < 50 && counter > 1) {
       $("output").css('color', 'Orange');
-    } else if (counter < 0) {
+    } else if (counter < 1) {
       $("output").css('color', 'Red');
-    }
+    } 
   });
 
 });
