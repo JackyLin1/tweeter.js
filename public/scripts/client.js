@@ -63,7 +63,7 @@ $(document).ready(function() {
     if (!$('textarea').val()) {
     // alert ('Nothing to share?');
       $('#errShort').toggle(200);
-    } else if (text.length > 140) {
+    } else if ($("textarea").val().length > 140) {
     // alert(`Too long, try something shorter`);
       $('#errLong').toggle(200);
     } else {
