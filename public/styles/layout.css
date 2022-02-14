@@ -44,6 +44,7 @@ main {
   border-style: dotted;
   margin: 15px;
   background: none;
+  word-break: break-all;
   }
 
   .box top {
@@ -118,12 +119,3 @@ main {
  .comment:hover {
    color:rgb(28, 81, 226);
  }
-
- /* first break point for desktop*/
- @media only screen and (min-width: 1024px) {
-  
- }
-
- @media only screen and (min-width: 768px) {
-
-}
