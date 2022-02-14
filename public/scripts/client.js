@@ -74,7 +74,7 @@ $(document).ready(function() {
         data: text,
       })
       // .then(console.log(text))
-        .then(loadTweets())
+        .then(()=>loadTweets())
         .then($('#errShort').hide())
         .then($('#errLong').hide())
         .then($('textarea').val(''))
